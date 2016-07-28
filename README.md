@@ -14,5 +14,7 @@ ldap_user - обязательно указывать с двумя \
 python3 main.py -s ldap.example.com -u "EXAMPLE\\\admin" -p "admin_pass" -w "gitlab_users" -r "http://gitlab.example.com" -a "gitlab_api_key" -g "group_in_gitlab" -l 30 (или другой уровень привилегий, от 10 до 50) -b "OU=users, DC=example, DC=com"
 
 
-Ограничения скрипта
+Ограничения скрипта 
+
+
 Скрипт не создает пользователей в Gitlab, и может добавить только уже существующих пользователей :(

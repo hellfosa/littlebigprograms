@@ -5,9 +5,6 @@ import argparse
 
 class ldap2gitlab(object):
 
-    def __init__(self):
-        pass
-
     def show_ad_group(self):
         server = ldap3.Server(args.server, get_info=ldap3.ALL)
         filter = '(&(objectclass=Person)(memberOf=CN={0},{1}))'.format(args.ldap_group, args.ldap_bind_dn)
@@ -46,7 +43,7 @@ def create_parser ():
     parser.add_argument('-s', '--server', nargs='?')
     parser.add_argument('-u', '--ldap_user', nargs='?')
     parser.add_argument('-p', '--ldap_pwd', nargs='?')
-    parser.add_argument('-b', '--ldap_bind_dn', nargs='?', default='OU=it, OU=main, OU=spb, OU=users, OU=humans, OU=mbk, DC=infocom, DC=lan')
+    parser.add_argument('-b', '--ldap_bind_dn', nargs='?')
     parser.add_argument('-w', '--ldap_group', nargs='?')
     parser.add_argument('-r', '--gitlab_url', nargs='?')
     parser.add_argument('-a', '--gitlab_apikey', nargs='?')

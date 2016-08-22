@@ -21,5 +21,7 @@ python3 main.py -s ldap.example.com -u "EXAMPLE\\\admin" -p "admin_pass" -w "git
 
 Скрипт для анализа пользовательских учеток в AD, посмотреть когда был последний вход, и статус учетной записи. 
 Просто захотелось написать :)
+
 Использовать как:
+
 python3 main.py -s ldap.example.com -u "EXAMPLE\\\admin" -p "admin_pass" -b "OU=users, DC=example, DC=com" -o "file.csv"

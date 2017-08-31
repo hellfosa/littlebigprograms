@@ -25,3 +25,13 @@ python3 main.py -s ldap.example.com -u "EXAMPLE\\\admin" -p "admin_pass" -w "git
 Использовать как:
 
 python3 main.py -s ldap.example.com -u "EXAMPLE\\\admin" -p "admin_pass" -b "OU=users, DC=example, DC=com" -o "file.csv"
+
+
+#################asterisk-geo##################
+
+Скрипт для анализа номера телефона. Используя api сайта - получает регион и оператора.
+
+Использовать как python3 get_geo.py XXXXXXXXXX, либо в составе ael-диалплана
+
+    number=${EXTEN};
+    Set(geolocation=${SHELL(/etc/asterisk/get_geo.py ${number})});
